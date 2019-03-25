@@ -1,0 +1,31 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'Ubuntu-16.04'
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
+
+# Conda Environment
+# This task is deprecated. Use `conda` directly in script to work with Anaconda environments.
+- task: CondaEnvironment@1
+  inputs:
+    #createCustomEnvironment: # Optional
+    #environmentName: # Required when createCustomEnvironment == True
+    #packageSpecs: 'python=3' # Optional
+    #updateConda: true # Optional
+    #installOptions: # Optional
+    #createOptions: # Optional
+    #cleanEnvironment: # Optional
